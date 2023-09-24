@@ -20,7 +20,7 @@ function moneyForCharity(input) {
       if (particepents >= 50) {
         junorTax -= junorTax * 0.25;
         seniorTax -= seniorTax * 0.25;
-    }
+      }
       break;
     case "downhill":
       junorTax = 12.25;
@@ -32,8 +32,11 @@ function moneyForCharity(input) {
       break;
   }
 
-  let totalMoney = junorTax * juniors + seniorTax * seniors;
-  
+  let juniorTotal = junorTax * juniors;
+  let seniorTotal = seniorTax * seniors;
+
+  let totalMoney = juniorTotal + seniorTotal;
+
   totalMoney *= 0.95;
 
   console.log(totalMoney.toFixed(2));
