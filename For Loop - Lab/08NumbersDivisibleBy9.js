@@ -3,6 +3,7 @@ function numDiv(input) {
   let loopEnd = Number(input[1]);
   let sum = 0;
   let output = "";
+
   for (let index = loopStart; index <= loopEnd; index++) {
     if (index % 9 === 0) {
       sum += index;
